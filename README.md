@@ -39,47 +39,47 @@ or run example in projects(need to run `bower install` before run)
 angular-summernote requires all include files of [Summernote](http://summernote.org/).
 see [Summernote's installation](http://summernote.org/#/features#installation).
 
-Project files are also available through your favourite package manager:
+项目文件也可以通过您最喜欢的包管理器:
 
 * Bower: `bower install angular-summernote`
 
 ## How To Use
 
-When you are done downloading all the dependencies and project files the only remaining part is to add dependencies on the ui.bootstrap AngularJS module:
+当您完成下载所有依赖关系和项目文件剩下的部分是在ui.bootstrap AngularJS模块添加依赖关系:
 
-When you've inclued all js and css files you need to inject `a` into your angular application:
+当你把所有的JS和CSS文件需要注入 `a` 进入你的角度应用:
 
 ```javascript
 angular.module('myApp', ['summernote']);
 ```
 
-### `summernote` Directive
+### `summernote` Directive(指令)
 
-You can use `summernote` directive where you want to use summernote editor.
-And when the scope is destroyed the directive will be destroyed.
+你可以使用 `summernote`指令要使用summernote编辑器.
+当范围被销毁时，指令将被销毁.
 
-#### As element:
+#### 作为元:
 
 ```html
 <summernote></summernote>
 ```
-#### As attribute:
+#### 属性:
 
 ```html
 <div summernote></div>
 ```
 
-It will be initialized automatically.
+它将自动初始化.
 
-If you put markups in the directive, the markups used as initial text.
+如果你把涨价的指令，标记作为初始文本.
 
 ```html
-<summernote><span style="font-weight: bold;">This is initial text.</span></summernote>
+<summernote><span style="font-weight: bold;">这是最初的文本.</span></summernote>
 ```
 
 ### Options
 
-summernote's options can be specified as attributes.
+summernote的选项可以指定为属性.
 
 #### height
 
@@ -87,18 +87,18 @@ summernote's options can be specified as attributes.
 <summernote height="300"></summernote>
 ```
 
-#### focus
+#### focus(集中)
 
 ```html
 <summernote focus></summernote>
 ```
 
-#### airmode
+#### airmode(大气模式)
 ```html
 <summernote airMode></summernote>
 ```
 
-If you use the `removeMedia` button in popover, like below:
+如果你使用 `removeMedia` 按钮在弹出，如下:
 
 ```
 <summernote airMode config="options" on-media-delete="mediaDelete(target)"></summernote>
@@ -118,7 +118,7 @@ function DemoController($scope) {
 }
 ```
 
-You can use the 'onMediaDelete` callback. The `target` object has information of the DOM that is removed like:
+你可以使用 'onMediaDelete` callback. The `target` 对象的DOM，删除信息:
 
 ```
 {
@@ -131,9 +131,9 @@ You can use the 'onMediaDelete` callback. The `target` object has information of
 }
 ```
 
-#### options object
+#### 选择对象
 
-You can specify all options using ngModel in `config` attribute.
+你可以指定所有的选项中使用ngmodel `config` 属性.
 
 ```html
 <summernote config="options"></summernote>
@@ -165,7 +165,7 @@ function DemoController($scope) {
 
 NOTE: `height` and `focus` attributes have high priority than options object.
 
-NOTE: custom toolbar can be set by options object.
+注：自定义工具栏可以通过选项对象设置.
 
 ### ngModel
 
@@ -189,7 +189,7 @@ if you want.
 
 ### Event Listeners
 
-event listeners can be registered as attribute as you want.
+事件侦听器可以注册为您想要的属性.
 
 ```javascript
 function DemoController($scope) {
