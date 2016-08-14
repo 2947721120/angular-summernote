@@ -6,8 +6,8 @@
 [![Dependency Status](https://gemnasium.com/summernote/angular-summernote.png)](https://gemnasium.com/summernote/angular-summernote)
 [![Coverage Status](https://coveralls.io/repos/summernote/angular-summernote/badge.png)](https://coveralls.io/r/summernote/angular-summernote)
 
-angular-summernote is just a directive to bind summmernote's all features.
-You can use summernote with angular way.
+角summernote只是一个指令绑定summmernote的所有功能。
+你可以使用summernote角的方法.
 
 **Since v0.7.x, the version of angular-summernote follows the version of summernote.
 So, angular-summernote v0.7.x are compatible with summernote v0.7.x and
@@ -16,7 +16,7 @@ Angular-summernote will match only `major.minor` with summernote.
 Therefore, angular-summernote v0.7.0 will be compatible with summernote v0.7.0, v0.7.1 and
 v0.7.2. Angular-summernote will release patch update, such as v0.7.1, if only angular-summernote has changed.**
 
-## Table of Contents
+## 表的内容
 
 - [Demo](#demo)
 - [Installation](#Installation)
@@ -29,21 +29,21 @@ v0.7.2. Angular-summernote will release patch update, such as v0.7.1, if only an
 - [FAQ](#faq)
 - [Change Logs](#change-logs)
 
-## Demo
+## 演示
 
-See at [JSFiddle](http://jsfiddle.net/outsider/n8dt4/322/embedded/result%2Chtml%2Cjs%2Ccss/)
-or run example in projects(need to run `bower install` before run)
+看 [JSFiddle](http://jsfiddle.net/outsider/n8dt4/322/embedded/result%2Chtml%2Cjs%2Ccss/)
+或在项目中运行的例子（需要运行 `bower install` 在运行)
 
-## Installation
+## 安装
 
-angular-summernote requires all include files of [Summernote](http://summernote.org/).
-see [Summernote's installation](http://summernote.org/#/features#installation).
+angular-summernote 要求所有包括文件 [Summernote](http://summernote.org/).
+看 [Summernote's installation](http://summernote.org/#/features#installation).
 
 项目文件也可以通过您最喜欢的包管理器:
 
 * Bower: `bower install angular-summernote`
 
-## How To Use
+## 如何使用
 
 当您完成下载所有依赖关系和项目文件剩下的部分是在ui.bootstrap AngularJS模块添加依赖关系:
 
@@ -77,11 +77,11 @@ angular.module('myApp', ['summernote']);
 <summernote><span style="font-weight: bold;">这是最初的文本.</span></summernote>
 ```
 
-### Options
+### 选项
 
 summernote的选项可以指定为属性.
 
-#### height
+#### 高度
 
 ```html
 <summernote height="300"></summernote>
@@ -118,7 +118,7 @@ function DemoController($scope) {
 }
 ```
 
-你可以使用 'onMediaDelete` callback. The `target` 对象的DOM，删除信息:
+你可以使用 `onMediaDelete` 回调。这个 `target` 对象的DOM，删除信息:
 
 ```
 {
@@ -163,15 +163,15 @@ function DemoController($scope) {
 }
 ```
 
-NOTE: `height` and `focus` attributes have high priority than options object.
+注: `height` 和 `focus` 属性比选项具有高优先级对象.
 
 注：自定义工具栏可以通过选项对象设置.
 
 ### ngModel
 
-summernote's `code`, that is HTML string in summernote.
-If you specify ngModel it will be 2-ways binding
-to HTML string in summernote. Otherwise `angular-summernote` simply ignore it.
+summernote's `code`, 这是summernote HTML字符串。
+如果你指定ngmodel将2结合
+在两个summernote HTML字符串。另有 `angular-summernote` 简单地忽略它.
 
 ```html
 <summernote ng-model="text"></summernote>
@@ -183,11 +183,11 @@ function DemoController($scope) {
 }
 ```
 
-And you can use [ngModelOptions](https://docs.angularjs.org/api/ng/directive/ngModelOptions)
-with Angular v1.3+. So, you can update ngModel when blur event emitted or with a debouncing delay
-if you want.
+你可以使用 [ngModelOptions](https://docs.angularjs.org/api/ng/directive/ngModelOptions)
+角V1.3 +。所以，你可以更新ngmodel模糊事件时发出的或与去抖延时
+如果你想要。
 
-### Event Listeners
+### 事件侦听器
 
 事件侦听器可以注册为您想要的属性.
 
@@ -218,15 +218,17 @@ function DemoController($scope) {
 </summernote>
 ```
 
-If you use `$editable` object in `onImageUpload` or `onChange`
-(see [summernote's callback](http://summernote.org/#/features#callbacks)),
-you should define `editable` attribute and use it in `$scope`.
+如果你使用 `$editable` 对象 `onImageUpload` 或 `onChange`
+(看 [summernote's callback](http://summernote.org/#/features#callbacks)),
+你应该定义 `editable` 属性并使用它 `$scope`.
 (Because [AngularJS 1.3.x restricts access to DOM nodes from within expressions](https://docs.angularjs.org/error/$parse/isecdom))
 
-Since summernote v0.6.4, APIs have been changed. So, If you use the verions,
-`onImageUpload` is not return `editor` object anymore. If you want to user
-`editor` object, you should define `editor` attribute and use it in `$scope`.
-Futhermore, you can use summernote's APIs via the `editor` object.
+因为summernote v0.6.4，API已经改变。所以，如果你使用的版本，
+`onImageUpload` 是没有回报的 `editor` 对象了。如果你想用户
+`editor`对象，你应该定义 `editor` 属性并使用它 `$scope`.
+Futhermore，你可以用summernote的API通过 `editor` 对象.如果你使用I18N，你必须包括语言文件。
+
+看到
 
 ### i18n Support
 
